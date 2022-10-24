@@ -68,6 +68,17 @@ a {
   cursor: pointer;
 }
 
+.menu-btn {
+  padding: .75rem 1rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.menu-btn:hover {
+  color: rgb(68, 68, 68);
+  transition: all 0.25s ease-in-out;
+
+}
+
 .nav-link {
 
   font-size: 5rem;
