@@ -153,6 +153,10 @@ a {
     display: block;
   }
 
+  .menu-btn {
+    padding: 1.5rem;
+  }
+
   .exit img {
     width: 2rem;
   }
