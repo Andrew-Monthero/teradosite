@@ -96,7 +96,9 @@ a {
 .menu-btn,
 .exit {
   cursor: pointer;
+
 }
+
 
 .menu-btn {
   font-family: 'Aderra', Montserrat, sans-serif;
@@ -164,63 +166,70 @@ a {
 
   }
 
-  .info-container {
-    display: none;
+  <<<<<<< HEAD .info-container {
+    =======.information {
+      >>>>>>>79cb6f8871813d2845d0aabfbcf3447e8558b1d6 display: none;
+    }
   }
-}
 
-/* HERO SECTION */
-.hero-sect {
+  /* HERO SECTION */
+  .hero-sect {
 
 
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ABOUT US */
-.about-us {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: start;
-  padding: 12% 6%;
-
-}
-
-.about-title h3 {
-  text-align: right;
-  font-family: 'Aderra', sans-serif;
-  font-size: 7rem;
-}
-
-.about-para {
-  padding: 14rem 0 0 5rem;
-  font-size: 1.50rem
-}
-
-.team {
-  height: 100vh;
-  width: 100%;
-}
-
-@media (max-width:900px) {
-  .about-us {
     height: 100vh;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ABOUT US */
+  .about-us {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    padding: 12% 6%;
+
   }
 
   .about-title h3 {
-    font-size: 4rem;
+    text-align: right;
+    font-family: 'Aderra', sans-serif;
+    font-size: 7rem;
   }
 
   .about-para {
-    font-size: 1rem;
-    padding: 2rem 0 2rem 4rem;
+    <<<<<<< HEAD padding: 14rem 0 0 5rem;
+    font-size: 1.50rem
   }
+
+  .team {
+    height: 100vh;
+    width: 100%;
+  }
+
+  @media (max-width:900px) {
+    .about-us {
+      height: 100vh;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 2rem;
+    }
+
+    .about-title h3 {
+      font-size: 4rem;
+    }
+
+    .about-para {
+      font-size: 1rem;
+      padding: 2rem 0 2rem 4rem;
+    }
+  }
+
+  =======text-align: center;
+  padding: 3rem 0;
 }
+
+>>>>>>>79cb6f8871813d2845d0aabfbcf3447e8558b1d6
