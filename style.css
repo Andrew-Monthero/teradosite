@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Aderra";
-  src: url(./fonts/aderra.otf);
+  src: url(/fonts/aderra.otf);
 
 }
 
@@ -146,7 +146,7 @@ a {
   }
 
   .information {
-    visibility: hidden;
+    display: none;
   }
 }
 
