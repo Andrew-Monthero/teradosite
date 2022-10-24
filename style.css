@@ -81,7 +81,11 @@ a {
 .menu-btn,
 .exit {
   cursor: pointer;
+  user-select: none;
+-webkit-user-select:none;
+-ms-user-select:none;
 }
+
 
 .menu-btn {
   font-family: 'Aderra', sans-serif;
