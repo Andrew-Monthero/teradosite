@@ -35,7 +35,7 @@ a {
 /* PRELOADER */
 .preloader {
   background: #000 url(images/preloader.gif) no-repeat center;
-  background-size: 20%;
+  background-size: 15%;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -102,7 +102,7 @@ a {
   font-family: 'Aderra', Montserrat, sans-serif;
   font-weight: 700;
   display: inline-block;
-  padding: 2rem;
+  padding: 1.5rem 0 1.5rem 1.5rem;
   transition: all 0.25s ease-in-out;
 }
 
@@ -142,7 +142,7 @@ a {
 
 @media(max-width:900px) {
   .nav-bar {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0 0 1.5rem;
   }
 
   .logo-large img {
