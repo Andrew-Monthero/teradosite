@@ -12,14 +12,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  -webkit-user-select:none;
+  -ms-user-select:none;
 }
 
 body {
   background-color: #000;
   color: white;
-  user-select: none;
-  -webkit-user-select:none;
-  -ms-user-select:none;
+
 }
 
 ul {
