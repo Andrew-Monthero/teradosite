@@ -17,6 +17,9 @@
 body {
   background-color: #000;
   color: white;
+  user-select: none;
+  -webkit-user-select:none;
+  -ms-user-select:none;
 }
 
 ul {
@@ -81,9 +84,7 @@ a {
 .menu-btn,
 .exit {
   cursor: pointer;
-  user-select: none;
--webkit-user-select:none;
--ms-user-select:none;
+  
 }
 
 
