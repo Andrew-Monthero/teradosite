@@ -1,3 +1,11 @@
+// PRELOADER
+const loader = document.querySelector('.preloader');
+window.addEventListener('load', () => {
+  setTimeout(function () {
+    loader.style.display = 'none';
+  }, 3000);
+});
+
 // NAVIGATION BAR
 const menuBtn = document.querySelector('.menu-btn');
 const exitBtn = document.querySelector('.exit');

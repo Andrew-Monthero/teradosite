@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Aderra";
-  src: url(/fonts/aderra.otf);
+  src: url(fonts/aderra.otf);
 
 }
 
@@ -12,11 +12,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 body {
   background-color: #000;
   color: white;
+
 }
 
 ul {
@@ -25,7 +29,18 @@ ul {
 
 a {
   text-decoration: none;
-  color: white
+  color: white;
+}
+
+/* PRELOADER */
+.preloader {
+  background: #000 url(images/preloader.gif) no-repeat center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  animation: ease-in-out;
 }
 
 /* NAVIGATION BAR */
@@ -43,7 +58,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 4.5rem;
+  padding: 1.5rem 2.5rem;
   color: white;
   background: #000;
   position: sticky;
@@ -84,9 +99,12 @@ a {
 }
 
 .menu-btn {
-  font-family: 'Aderra', sans-serif;
+  font-family: 'Aderra', Montserrat, sans-serif;
   font-weight: 700;
-  padding: .75rem 1rem;
+  display: inline-block;
+
+  padding: 2em;
+  margin: -2em;
   transition: all 0.25s ease-in-out;
 }
 
@@ -97,7 +115,7 @@ a {
 }
 
 .nav-link {
-  font-family: 'Aderra', sans-serif;
+  font-family: 'Aderra', Montserrat, sans-serif;
   font-size: 5rem;
   font-weight: 600;
   transition: all 0.25s ease-in-out;
@@ -117,6 +135,7 @@ a {
 .title {
   color: rgb(133, 120, 104);
   font-size: 2rem;
+  font-family: 'Aderra', Montserrat, sans-serif;
 }
 
 .nav {
@@ -145,8 +164,8 @@ a {
 
   }
 
-  .information {
-    visibility: hidden;
+  .info-container {
+    display: none;
   }
 }
 
@@ -163,23 +182,45 @@ a {
 
 /* ABOUT US */
 .about-us {
-  height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  padding: 15%;
+  align-items: start;
+  padding: 12% 6%;
 
 }
 
 .about-title h3 {
-  text-align: center;
+  text-align: right;
   font-family: 'Aderra', sans-serif;
-  font-size: 4rem;
+  font-size: 7rem;
 }
 
 .about-para {
-  text-align: center;
-  padding: 3rem 0;
+  padding: 14rem 0 0 5rem;
+  font-size: 1.50rem
+}
+
+.team {
+  height: 100vh;
+  width: 100%;
+}
+
+@media (max-width:900px) {
+  .about-us {
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 2rem;
+  }
+
+  .about-title h3 {
+    font-size: 4rem;
+  }
+
+  .about-para {
+    font-size: 1rem;
+    padding: 2rem 0 2rem 4rem;
+  }
 }
