@@ -115,6 +115,7 @@ a {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 0 2rem;
+
 }
 
 .menu-btn,
@@ -136,6 +137,7 @@ a {
 }
 
 .nav-link {
+  color: var(--clr-light);
   display: block;
   font-family: var(--title);
   font-size: 5rem;
@@ -153,6 +155,7 @@ a {
 
 .info-container {
   width: 40%;
+  color: var(--clr-light);
 }
 
 .address {
@@ -160,8 +163,10 @@ a {
   line-height: 1.75;
 }
 
+
 .socials a {
-  display: block;
+  color: var(--clr-light);
+  display: inline-block;
   padding: 1rem 1rem 1rem 0;
 }
 
@@ -285,10 +290,9 @@ a {
 }
 
 .tag-capital {
-  padding-top: 12rem;
-  font-size: 8rem;
+  font-size: 14rem;
   text-align: right;
-  line-height: 8.25rem;
+  line-height: 14rem;
   color: var(--clr-secondary);
 }
 
@@ -343,7 +347,7 @@ a {
 .value-wrapper h3 {
   font-family: var(--body);
   text-transform: uppercase;
-  font-size: 8rem;
+  font-size: 14rem;
   font-weight: 300;
   white-space: nowrap;
   padding-right: 3rem;
@@ -377,16 +381,16 @@ a {
   }
 
   .tagline-small {
-    font-size: 1.25rem;
-    padding-right: 60%;
-    line-height: 1.25rem;
+    font-size: 2rem;
+    padding-right: 45%;
+    line-height: 2rem;
   }
 
   .tag-capital {
-    font-size: 4rem;
+    font-size: 7rem;
     text-align: right;
-    padding: 4rem 0 0 40%;
-    line-height: 4.25rem;
+    padding-top: 3rem;
+    line-height: 8.25rem;
     color: var(--clr-secondary)
   }
 
@@ -414,6 +418,6 @@ a {
   }
 
   .value-wrapper h3 {
-    font-size: 4rem;
+    font-size: 8rem;
   }
 }
