@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
 
 
 
@@ -10,10 +10,10 @@
   --clr-secondary: #0c7b93;
   --clr-accent: #e43f5a;
 
-  --background: var(--clr-dark);
-  --foreground: var(--clr-light);
+  --background: var(--clr-light);
+  --foreground: var(--clr-dark);
 
-  --title: "Quicksand", sans-serif;
+  --title: "Barlow", sans-serif;
   --body: "Oswald", sans-serif;
 }
 
@@ -23,8 +23,8 @@
     --clr-secondary: #0c7b93;
     --clr-accent: #e43f5a;
 
-    --foreground: var(--clr-dark);
-    --background: var(--clr-light);
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
   }
 }
 
@@ -268,46 +268,41 @@ a {
 }
 
 /* ABOUT US */
+/* TAGLINE */
+.tagline-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding: 5rem 2.5rem;
+  text-transform: uppercase;
+}
+
+.tagline-small {
+  font-size: 4rem;
+  line-height: 4.25rem;
+  padding-right: 8rem;
+}
+
+.tag-capital {
+  padding-top: 12rem;
+  font-size: 8rem;
+  text-align: right;
+  line-height: 8.25rem;
+  color: var(--clr-secondary);
+}
+
+/* ABOUT US & WHY WE DO */
 .about-us {
   background: var(--clr-secondary);
   color: var(--background);
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   padding: 5rem 2.5rem;
-}
-
-.about-title h3 {
-  text-align: right;
-  font-family: var(--title), sans-serif;
-  font-size: 7rem;
-}
-
-.about-para,
-.why-we-para {
-  padding: 14rem 0 0 5rem;
-  font-size: 1.50rem;
-  font-weight: 500;
-}
-
-.tagline-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 5rem 2.5rem;
-}
-
-.tagline {
-  font-size: 5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--clr-light);
-  padding-right: 40%;
 }
 
 .why-container {
@@ -320,11 +315,50 @@ a {
   padding: 5rem 2.5rem;
 }
 
-.why-we h3 {
+.why-we h3,
+.about-title h3 {
   text-align: right;
-  font-family: var(--title), sans-serif;
+  font-family: var(--body), sans-serif;
+  white-space: nowrap;
   font-size: 6rem;
-  padding-right: 1rem;
+  font-weight: 400;
+}
+
+.about-para,
+.why-we-para {
+  padding: 10rem 0 0 4rem;
+  font-size: 1.50rem;
+  font-weight: 300;
+}
+
+/* OUR VALUES */
+.value-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  overflow: hidden;
+}
+
+.value-wrapper h3 {
+  font-family: var(--body);
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-weight: 300;
+  white-space: nowrap;
+  padding-right: 3rem;
+  letter-spacing: -0.25rem;
+  animation: move-rtl 7000ms linear infinite;
+}
+
+@keyframes move-rtl {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* .team {
@@ -335,21 +369,31 @@ a {
 
 @media (max-width:900px) {
   .tagline-container {
-    height: 100vh;
+    height: 100%;
     padding: 3rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
   }
 
-  .tagline {
-    font-size: 3rem;
-    text-transform: uppercase;
-    padding-right: 30%;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--clr-light);
+  .tagline-small {
+    font-size: 1.25rem;
+    padding-right: 60%;
+    line-height: 1.25rem;
+  }
+
+  .tag-capital {
+    font-size: 4rem;
+    text-align: right;
+    padding: 4rem 0 0 40%;
+    line-height: 4.25rem;
+    color: var(--clr-secondary)
   }
 
   .about-us,
   .why-container {
     height: 100%;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     padding: 3rem 1.25rem;
@@ -366,7 +410,10 @@ a {
     height: 100%;
     font-size: 1.5rem;
     font-weight: 300;
-    padding: 4rem 0 2rem 4rem;
+    padding: 3rem 0 2rem 3rem;
   }
 
+  .value-wrapper h3 {
+    font-size: 4rem;
+  }
 }
