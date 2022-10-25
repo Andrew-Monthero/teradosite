@@ -1,25 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
-@font-face {
-  font-family: "Aderra";
-  src: url(fonts/aderra.otf);
 
+:root {
+  --clr-light: #e4e4e4;
+  --clr-dark: #091224;
+  --clr-primary: #27496d;
+  --clr-secondary: #0c7b93;
+  --clr-accent: #e43f5a;
+
+  --background: var(--clr-dark);
+  --foreground: var(--clr-light);
+
+  --title: "Quicksand", sans-serif;
+  --body: "Oswald", sans-serif;
+}
+
+@media(prefers-color-scheme:light) {
+  :root {
+    --clr-primary: #27496d;
+    --clr-secondary: #0c7b93;
+    --clr-accent: #e43f5a;
+
+    --foreground: var(--clr-dark);
+    --background: var(--clr-light);
+  }
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--body);
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
 
 body {
-  background-color: #000;
-  color: white;
+  background-color: var(--background);
+  color: var(--foreground);
 
 }
 
@@ -29,7 +50,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--foreground);
 }
 
 /* PRELOADER */
@@ -59,8 +80,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2.5rem;
-  color: white;
-  background: #000;
+  background: var(--background);
   position: sticky;
   top: 0;
 }
@@ -77,19 +97,23 @@ a {
   right: 2.5rem;
 }
 
-.menu {
+.scroll {
+  display: none;
+}
 
+.menu {
+  background: rgba(8, 16, 24, 0.75);
   opacity: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: white;
   height: 100vh;
   width: 100%;
   position: fixed;
   top: -100%;
   align-items: center;
-  background-color: rgb(36, 36, 36);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 0 2rem;
 }
 
@@ -99,30 +123,51 @@ a {
 }
 
 .menu-btn {
-  font-family: 'Aderra', Montserrat, sans-serif;
+  font-family: var(--title);
   font-weight: 700;
-  padding: 1.5rem 0 1.5rem 1.5rem;
+  padding: 1.5rem;
   transition: all 0.25s ease-in-out;
 }
 
 .menu-btn:hover {
-  color: rgb(68, 68, 68);
+  color: var(--clr-accent);
   transition: all 0.25s ease-in-out;
 
 }
 
 .nav-link {
-  font-family: 'Aderra', Montserrat, sans-serif;
+  display: block;
+  font-family: var(--title);
   font-size: 5rem;
   font-weight: 600;
+  padding-bottom: 1.5rem;
   transition: all 0.25s ease-in-out;
 
 }
 
 .nav-link:hover {
-  color: rgb(68, 68, 68);
+  color: var(--clr-accent);
   transition: all 0.25s ease-in-out;
 
+}
+
+.info-container {
+  width: 40%;
+}
+
+.address {
+  padding-top: 1rem;
+  line-height: 1.75;
+}
+
+.socials a {
+  display: block;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.data {
+  display: block;
+  padding: 1rem 1rem 0.25rem 0;
 }
 
 .info {
@@ -130,18 +175,36 @@ a {
 }
 
 .title {
-  color: rgb(133, 120, 104);
+  color: var(--clr-accent);
   font-size: 2rem;
-  font-family: 'Aderra', Montserrat, sans-serif;
+  font-family: var(--title);
 }
+
 
 .nav {
   margin-top: -1.2rem;
 }
 
 @media(max-width:900px) {
+  .preloader {
+    background-size: 30%;
+  }
+
+  .menu {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8rem 1.5rem;
+    overflow: scroll;
+  }
+
+  .nav-list {
+    padding: 10rem 0 15rem 0;
+  }
+
   .nav-bar {
-    padding: 1.5rem 1.5rem 0 1.5rem;
+    padding: 1.5rem 0 0 1.5rem;
   }
 
   .logo-large img {
@@ -153,23 +216,50 @@ a {
   }
 
   .exit img {
-    width: 2rem;
+    width: 3rem;
+  }
+
+  .exit {
+    top: 2rem;
+    right: 0.5rem;
+    padding: 1.5rem;
+  }
+
+  .scroll img {
+    width: 5rem;
+  }
+
+  .scroll {
+    display: block;
+    position: fixed;
+    bottom: 2.5%;
+    right: 3%;
+    text-align: center;
   }
 
   .nav-link {
     font-size: 3rem;
-
   }
 
   .info-container {
-    display: none;
+    width: 90%;
+
+  }
+
+  .socials a {
+    display: block;
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  .data {
+    display: block;
+    padding: 1rem 1rem 0.25rem 0;
   }
 }
 
+
 /* HERO SECTION */
 .hero-sect {
-
-
   height: 100vh;
   width: 100%;
   display: flex;
@@ -179,45 +269,104 @@ a {
 
 /* ABOUT US */
 .about-us {
+  background: var(--clr-secondary);
+  color: var(--background);
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: start;
-  padding: 12% 6%;
-
+  padding: 5rem 2.5rem;
 }
 
 .about-title h3 {
   text-align: right;
-  font-family: 'Aderra', sans-serif;
+  font-family: var(--title), sans-serif;
   font-size: 7rem;
 }
 
-.about-para {
+.about-para,
+.why-we-para {
   padding: 14rem 0 0 5rem;
-  font-size: 1.50rem
+  font-size: 1.50rem;
+  font-weight: 500;
 }
 
-.team {
+.tagline-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5rem 2.5rem;
+}
+
+.tagline {
+  font-size: 5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--clr-light);
+  padding-right: 40%;
+}
+
+.why-container {
   height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5rem 2.5rem;
 }
 
+.why-we h3 {
+  text-align: right;
+  font-family: var(--title), sans-serif;
+  font-size: 6rem;
+  padding-right: 1rem;
+}
+
+/* .team {
+  height: 100vh;
+  width: 100%;
+} */
+
+
 @media (max-width:900px) {
-  .about-us {
+  .tagline-container {
     height: 100vh;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 2rem;
+    padding: 3rem 1.25rem;
   }
 
-  .about-title h3 {
+  .tagline {
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding-right: 30%;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--clr-light);
+  }
+
+  .about-us,
+  .why-container {
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 1.25rem;
+  }
+
+  .about-title h3,
+  .why-we h3 {
+    text-align: left;
     font-size: 4rem;
   }
 
-  .about-para {
-    font-size: 1rem;
-    padding: 2rem 0 2rem 4rem;
+  .about-para,
+  .why-we-para {
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 4rem 0 2rem 4rem;
   }
+
 }

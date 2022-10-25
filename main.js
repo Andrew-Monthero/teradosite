@@ -3,7 +3,7 @@ const loader = document.querySelector('.preloader');
 window.addEventListener('load', () => {
   setTimeout(function () {
     loader.style.display = 'none';
-  }, 3000);
+  }, 2000);
 });
 
 // NAVIGATION BAR
@@ -21,3 +21,5 @@ exitBtn.addEventListener('click', () => {
   t1.timeScale(3);
   t1.reverse();
 });
+
+// ABOUT US
