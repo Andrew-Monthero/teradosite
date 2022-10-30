@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
 html {
@@ -16,8 +17,8 @@ html {
   --background: var(--clr-light);
   --foreground: var(--clr-dark);
 
-  --title: "Barlow", sans-serif;
-  --body: "Oswald", sans-serif;
+  --title: 'Jura', sans-serif;
+  --body: "Quicksand", sans-serif;
 }
 
 @media(prefers-color-scheme:light) {
@@ -100,8 +101,7 @@ a {
 }
 
 .menu {
-  background: rgba(8, 16, 24, 0.75);
-  opacity: 0;
+  background: #26585F;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -110,10 +110,7 @@ a {
   position: fixed;
   top: -100%;
   align-items: center;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 0 3.2rem;
-
+  padding: 0 16rem;
 }
 
 .menu-btn,
@@ -138,15 +135,15 @@ a {
   color: var(--clr-light);
   display: block;
   font-family: var(--title);
-  font-size: 8rem;
-  font-weight: 600;
-  padding-bottom: 2.4rem;
+  font-size: 6.4rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
   transition: all 0.25s ease-in-out;
 
 }
 
 .nav-link:hover {
-  color: var(--clr-accent);
+  color: #f3fe39;
   transition: all 0.25s ease-in-out;
 
 }
@@ -158,15 +155,20 @@ a {
 }
 
 .address {
-  padding-top: 1.6rem;
+  padding: 1.6rem 20% 0 0;
   line-height: 1.75;
 }
 
+.soc-links {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -1.2rem;
+}
 
 .socials a {
   color: var(--clr-light);
   display: inline-block;
-  padding: 1.6rem 1.6rem 1.6rem 0;
+  padding: 1.6rem;
 }
 
 .data {
@@ -179,10 +181,10 @@ a {
 }
 
 .title {
-  color: var(--clr-secondary);
+  color: #f3fe39;
   font-size: 4.8rem;
   font-family: var(--title);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .nav {
@@ -208,11 +210,11 @@ a {
   }
 
   .nav-list {
-    padding: 16rem 0 34rem 0;
+    padding: 16rem 0 28rem 0;
   }
 
   .nav-bar {
-    padding: 2.4rem 0 0 2.4rem;
+    padding: 1.2rem 0 0 1.6rem;
   }
 
   .logo-large img {
@@ -243,7 +245,7 @@ a {
 
   .socials a {
     display: block;
-    padding: 1.6rem 1.6rem 1.6rem 0;
+    padding: 1.6rem;
   }
 
   .data {
